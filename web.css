@@ -1,0 +1,364 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.logo{
+    float: left ;
+    color: aliceblue;
+    font-weight: bold;
+}
+header {
+    position: relative;
+    height: 150px;
+    background-color: deeppink;
+    margin: 0;
+    padding: 0;
+}
+
+header .right-column .box:first-child {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 50px; /* Sesuaikan tinggi sesuai kebutuhan */
+    background-color: #3498db;
+    border: 2px solid red;
+}
+
+
+
+
+
+/* css untuk navbar*/
+
+.navbar {
+    background-color: blueviolet;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a:hover{
+    background-color: darkred;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.navbar-left {
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        background-color: brown;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: 25px;
+        bottom: 0;
+    }
+
+    .navbar-links.show {
+       display: inline;
+        text-align: right;
+        justify-content: space-between;
+        
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+    
+}
+/* css untuk list film */
+p{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+}
+h3{
+    text-align: center;
+}
+hr {
+    border: 1px solid red;
+}
+
+/* Style profil.html*/
+.jadwal1 {
+    background-color: aquamarine;
+    color: aliceblue;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 35px;
+
+}
+.biodata {
+    
+    margin-top: 25px;
+    padding-top: 25px;
+    background-color: darkturquoise;
+    color: aliceblue;
+    padding-bottom: 25px;
+    border-radius: 35px;
+}
+
+
+img {
+    float: lift;
+    max-width: 125px;
+    max-height: auto;
+    border-radius: 1;
+    margin-bottom: 12px;
+    margin-left: 12px;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px;
+    margin-top: 15px;
+    
+}
+table{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* css untuk layout */
+
+.container{
+    position: relative;
+   
+    top: 50%;
+    color: cornflowerblue;
+}
+.container .header{
+    min-height: 100px;
+   background-color: black;
+   text-align: center;
+}
+.container .nav{
+    height: 70px;
+    background-color: azure;
+}
+.container .content{
+    grid-area: content;
+   background-color: black;
+    display: flex;
+    height: 500px;
+    display: grid;
+    grid-template-areas: 'cel1 cel2 cel3';
+}
+.container .content .cel1{
+    background-color: cadetblue;
+    grid-area: cel1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.content .cel1 .left1{
+    width: 70%;
+    background-color: black;
+    height: 80px;
+    text-align: center;
+}
+.content .cel1 .left2{
+    width: 70%;
+    background-color: aquamarine;
+    height: 80px;
+    text-align: center;
+}
+.content .cel1 .left3{
+    width: 70%;
+    background-color: blueviolet;
+    height: 80px;
+    text-align: center;
+}
+.container .content .cel2{
+    background-color: darksalmon;
+    grid-area: cel2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.content .cel2 .center1{
+    background-color: darkred;
+    width: 70%;
+    height: 80px;
+}
+.content .cel2 .center2{
+    width: 80%;
+    background-color: indianred;
+    height: 80px;
+    text-align: center;
+}
+.content .cel2 .center3{
+    width: 90%;
+    background-color: gray;
+    height: 80px;
+    text-align: center;
+}
+.container .content .cel3{
+    background-color: rgb(216, 216, 25);
+    grid-area: cel3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.content .cel3 .right1{
+    width: 70%;
+    background-color: rgb(206, 127, 23);
+    height: 80px;
+    text-align: center;
+}
+.content .cel3 .right2{
+    width: 70%;
+    background-color: aquamarine;
+    height: 80px;
+    text-align: center;
+}
+.container .footer{
+    text-align: center;
+    background-color: black;
+    height: 100px;
+    color: aliceblue;
+}
+/*css pengaturan layout*/
+.zoomable.zoomed{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+.zoomable-clickable{
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+.zoomed{
+    transform: scale(1.2);
+}
+.clicked{
+    background-color: brown;
+}
+.zoomable-clickable{
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+.zoomed{
+    transform: scale(1.2);
+}
+.clicked{
+    background-color: "#90EE90";
+}
+
+.clickable{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.rotated{
+    transform: rotate(360deg);
+    background-color: "#66CDAA";
+}
+
+.clickable{
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.center2.rotating{
+    animation: rotate 1s linear forwards;
+    background-color: "#FFA500";
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.clickable{
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.center3.rotating{
+    animation: rotate 1s linear forwards;
+    background-color: "#9ACD32";
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.clickable{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.center1{
+    transition: transform 1s ease, transform-origin 1s ease, scaleX 1s ease;
+    transform-origin: right;
+}
+.center2{
+    transition: transform 1s ease, transform-origin 1s ease, scaleX 1s ease;
+    transform-origin: right;
+}
+.center3{
+    transition: transform 1s ease, transform-origin 1s ease, scaleX 1s ease;
+    transform-origin: right;
+}
+.nav{
+    transform: rotateX(0);
+    transition: transform 1s ease;
+    transform-origin: top;
+}
+.open{
+    transform: rotateX(-180deg);
+}
+.closed{
+    transform: rotateX(0);
+}
+
+.footer{
+    transition: transform 1s ease, transform-origin 1s ease, scaleY 1s ease;
+    transform-origin: bottom;
+}
+
+

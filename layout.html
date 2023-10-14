@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS WEB</title>
+    <link rel="stylesheet" href="web.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">UTS WEB</div>
+            <div class="navbar-links" id="navbar-links">
+                <a href="Home.html">HOME</a>
+                <a href="profil.html">PROFIL</a>
+                <a href="layout.html">LAYOUT</a>
+                <a href="dom.html">DOM</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="header">
+            
+           
+        </div>
+        <div class="nav">
+            
+        </div>   
+        <div class="content">
+            <div class="cel1">
+                <div class="left1 clickable">Left1</div>
+               
+                <div class="left2 clickable">Left2</div>
+                
+                <div class="left3 clickable">Left3</div>
+            </div>
+            <div class="cel2">
+               
+                <div class="center1" id="center1" >Center1</div>
+                <div class="center2 zoomable-clickable" >Center2</div>
+                <div class="center3" id="center3">Center3</div>
+            </div>
+            <div class="cel3">
+                
+                <div class="right1 zoomable-clickable">right1</div>
+                <div class="right2 zoomable-clickable">right2</div>
+            </div>
+        </div>
+        <div class="footer">
+        
+    </div>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu');
+        const navbarLinks = document.getElementById('navbar-links');
+
+        mobileMenuButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('show');
+        });
+
+        const header = document.getElementsByClassName('header')[0];
+            header.innerHTML="HEADER";
+            header.style.color="grey";
+            header.addEventListener('mouseenter' , function(){
+                header.style.backgroundColor="darkred";
+                header.innerHTML="sunday to monday morning";
+                header.style.color="yellow";
+                
+            })
+            header.addEventListener('click' , function(){
+                header.style.backgroundColor="black";
+                header.innerHTML="HEADER";
+                header.style.color="grey";
+                
+            })
+
+            var left1 = document.querySelector(".left1.clickable");
+            left1.addEventListener("click", function(){
+                left1.classList.toggle("rotated");
+                if(left1.style.backgroundColor === "red"){
+                    left1.style.backgroundColor = "";
+                }
+                else{
+                    left1.style.backgroundColor = "red";
+                }
+            })
+
+            var left2 = document.querySelector(".left2.clickable");
+            left2.addEventListener("click", function(){
+                left2.classList.toggle("rotated");
+                if(left2.style.backgroundColor === "black"){
+                    left2.style.backgroundColor = "";
+                }
+                else{
+                    left2.style.backgroundColor = "black";
+                }
+            })
+            var left3 = document.querySelector(".left3.clickable");
+            left3.addEventListener("click", function(){
+                left3.classList.toggle("rotated");
+                if(left3.style.backgroundColor === "plum"){
+                    left3.style.backgroundColor = "";
+                }
+                else{
+                    left3.style.backgroundColor = "plum";
+                }
+            })
+           
+            var right1 = document.querySelector(".right1.zoomable-clickable");
+            right1.addEventListener("click", function(){
+                right1.classList.toggle("zoomed");
+                right1.classList.toggle("clicked");
+
+                if(right1.style.backgroundColor === "plum"){
+                    right1.style.backgroundColor ="";
+                }
+                else{
+                    right1.style.backgroundColor="plum";
+                }
+            })
+            var right2 = document.querySelector(".right2.zoomable-clickable");
+            right2.addEventListener("click", function(){
+                right2.classList.toggle("zoomed");
+                right2.classList.toggle("clicked");
+
+                if(right2.style.backgroundColor === "blue"){
+                    right2.style.backgroundColor ="";
+                }
+                else{
+                    right2.style.backgroundColor="blue";
+                }
+            })
+            var center1 = document.getElementById("center1");
+            center1.addEventListener("click", function(){
+                center1.style.transform = "rotateY(-180deg) scaleX(0)";
+                setTimeout(function(){
+                    center1.style.transform = "rotateY(0) scaleX(1)";
+                }, 1000);
+            })
+            var center3 = document.getElementById("center3");
+            center3.addEventListener("click", function(){
+                center3.style.transform = "rotateY(-180deg) scaleX(0)";
+                setTimeout(function(){
+                    center3.style.transform = "rotateY(0) scaleX(1)";
+                }, 1000);
+            })
+            var center2 = document.querySelector(".center2.zoomable-clickable");
+            center2.addEventListener("click", function(){
+                center2.classList.toggle("zoomed");
+                center2.classList.toggle("clicked");
+
+                if(center2.style.backgroundColor === "blue"){
+                    center2.style.backgroundColor ="";
+                }
+                else{
+                    center2.style.backgroundColor="blue";
+                }
+            })
+
+    </script>
+    
+</body>
+</html>
